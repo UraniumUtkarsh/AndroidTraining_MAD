@@ -10,7 +10,9 @@
         <item name="windowActionBar">true</item>
         <item name="color">@color/title</item>
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/title</item>        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/button_orange</item>
+
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="title_text" parent="Widget.AppCompat.TextView">
