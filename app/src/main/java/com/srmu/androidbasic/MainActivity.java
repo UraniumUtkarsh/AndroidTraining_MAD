@@ -2,6 +2,7 @@ package com.srmu.androidbasic;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     //declare the java fields
     Button play, stop;
+    //music play krne k liye class MediaPlayer ki jarurat padegi
+    MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //create context helps to attach...
+        //Context means application ka reference
+        mediaPlayer=MediaPlayer.create(this,
+                Uri.parse("http://utkarshpandey.com/assets/sound/nuclear-siren.mp3"));
         //to initialize the java fields from UI widgets
         play=findViewById(R.id.btn_play);
         stop=findViewById(R.id.btn_stop);
@@ -41,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Gaana bajna shuru hogya hai🎶", Toast.LENGTH_SHORT).show();
+                mediaPlayer.start();
             }
         });
 

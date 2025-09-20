@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Bajate Raho🎷"
         style="@style/title_text"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:textColor="@color/white"
         android:id="@+id/btn_play"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!--Rather using android:backgroundTint="@color/title", we can leave
