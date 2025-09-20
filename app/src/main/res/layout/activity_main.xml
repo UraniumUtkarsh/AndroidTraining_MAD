@@ -34,6 +34,15 @@
     it as colors are being managed through themes.
     And that changes color of all buttons at once-->
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/btn_pause"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_play"/>
 
     <Button
         android:layout_width="match_parent"
@@ -43,6 +52,6 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_play"/>
+        app:layout_constraintTop_toBottomOf="@id/btn_pause"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

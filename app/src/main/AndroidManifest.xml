@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasic">
         <!--   Theme being called 👆     -->
+
+        <!-- "android:screenOrientation="portrait" feature is depreciated but can be used and is used to restrict from changing layout       -->
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

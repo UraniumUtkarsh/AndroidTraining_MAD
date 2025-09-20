@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     //declare the java fields
-    Button play, stop;
+    Button play, pause, stop;
     //music play krne k liye class MediaPlayer ki jarurat padegi
     MediaPlayer mediaPlayer;
     @Override
@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         //create context helps to attach...
         //Context means application ka reference
         mediaPlayer=MediaPlayer.create(this,
-                Uri.parse("http://utkarshpandey.com/assets/sound/nuclear-siren.mp3"));
+                Uri.parse("https://gothic-amaranth-gel7sx8g6w.edgeone.app/Tu%20Hain%20Toh%20Mr%20And%20Mrs%20Mahi%20128%20Kbps.mp3 "));
         //to initialize the java fields from UI widgets
         play=findViewById(R.id.btn_play);
+        pause=findViewById(R.id.btn_pause);
         stop=findViewById(R.id.btn_stop);
         //to click on the buttons
         //play button ka object hai 'play'
@@ -51,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.start();
             }
         });
-
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Gaana rok diya gya hai", Toast.LENGTH_SHORT).show();
+                mediaPlayer.pause();
+            }
+        });
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Gaana band kar diya gaya hai", Toast.LENGTH_SHORT).show();
+                mediaPlayer.stop();
+            }
+        });
     }
 }
