@@ -1,9 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AndroidBasic" parent="Theme.Material3.DayNight.NoActionBar">
+<!--    <style name="Base.Theme.AndroidBasic" parent="Theme.Material3.DayNight.NoActionBar">-->
+
+
+    <!--    just change parent name to change color of theme of title-->
+
+
+    <style name="Base.Theme.AndroidBasic" parent="Theme.Material3.Dark">
+        <item name="windowActionBar">true</item>
+        <item name="color">@color/title</item>
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/title</item>        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="title_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/title</item>
+        <item name="fontFamily">bold|cursive</item>
+        <item name="android:textSize">@dimen/titleSize</item>
+    </style>
     <style name="Theme.AndroidBasic" parent="Base.Theme.AndroidBasic" />
+
+    <dimen name="titleSize">50dp</dimen>
 </resources>
