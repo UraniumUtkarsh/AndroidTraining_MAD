@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     //declare the java fields
-    Button play, pause, stop;
+    Button play, pause, stop, play2, pause2, stop2;
     //music play krne k liye class MediaPlayer ki jarurat padegi
     MediaPlayer mediaPlayer;
     @Override
@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         play=findViewById(R.id.btn_play);
         pause=findViewById(R.id.btn_pause);
         stop=findViewById(R.id.btn_stop);
+
+        //dont know how to set Mediaplayer for song2 ? -- Question ??
+        play2=findViewById(R.id.song2_playbtn);
+        pause2=findViewById(R.id.song2_pausebtn);
+        stop2=findViewById(R.id.song2_stopbtn);
         //to click on the buttons
         //play button ka object hai 'play'
 
@@ -63,6 +68,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Gaana band kar diya gaya hai", Toast.LENGTH_SHORT).show();
+                mediaPlayer.stop();
+            }
+        });
+        play2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Song2 have started", Toast.LENGTH_SHORT).show();
+                mediaPlayer.start();
+            }
+        });
+        pause2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Song2 paused", Toast.LENGTH_SHORT).show();
+                mediaPlayer.pause();
+            }
+        });
+        stop2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Song2 Stopped!", Toast.LENGTH_SHORT).show();
                 mediaPlayer.stop();
             }
         });

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidBasic</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="all_searches_shown">All searches are shown here...</string>
+    <string name="title_text">Favorite Melody 🎶</string>
+    <string name="searchbar">Search Song</string>
 </resources>
